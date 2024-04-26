@@ -11,3 +11,8 @@ export function szures(lista, keresoSzoveg) {
 
   return szurtLISTA;
 }
+
+export function torol(lista, id) {
+  lista.splice(id, 1);
+  return lista
+}

@@ -23,30 +23,31 @@
         </ul>
         <form class="was-validated">
             <div class="mb-3 mt-3">
-                <label for="nev" class="form-label">Vezetéknév:</label>
-                <input type="text" class="form-control" id="nev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
+                <label for="vnev" class="form-label">Vezetéknév:</label>
+                <input type="text" class="form-control" id="vnev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Nagybetűvel kezdődjön, legalább 3 betű!</div>
             </div>
             <div class="mb-3 mt-3">
-                <label for="nev" class="form-label">Keresztnév:</label>
-                <input type="text" class="form-control" id="nev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
+                <label for="knev" class="form-label">Keresztnév:</label>
+                <input type="text" class="form-control" id="knev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Nagybetűvel kezdődjön, legalább 3 betű!</div>
             </div>
             <div class="mb-3 mt-3">
-                <label for="nev" class="form-label">Telefonszám:</label>
-                <input type="text" class="form-control" id="nev" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required placeholder="Írja be a nevét" name="nev">
+                <label for="tszam" class="form-label">Telefonszám:</label>
+                <input type="text" class="form-control" id="tszam" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Érvényes telefonszámot adjon meg!</div>
             </div>
             <div class="mb-3 mt-3">
-                <label for="nev" class="form-label">Számlaszám:</label>
-                <input type="text" class="form-control" id="nev" pattern="^(?:4[0-9]{12})(?:[0-9]{3})?" required placeholder="Írja be a nevét" name="nev">
+                <label for="szlaszam" class="form-label">Számlaszám:</label>
+                <input type="text" class="form-control" id="szlaszam" pattern="^(?:4[0-9]{12})(?:[0-9]{3})?" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Visa számlaszámot adjon meg!</div>
             </div>
             
+            <input id="kuld" type="submit" value="Küldés">
         </form>
     </main>
 </body>
