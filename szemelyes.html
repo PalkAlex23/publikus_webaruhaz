@@ -15,6 +15,7 @@
 </head>
 <body>
     <main class="container-fluid">
+        <p class="h2 text-center">OverGame áruház</p>
         <ul class="nav nav-pills nav-justified">
             <li class="nav-item"><a href="index.html" class="nav-link">Termékeink</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Kosár</a></li>
@@ -24,21 +25,21 @@
         <form class="was-validated">
             <div class="mb-3 mt-3">
                 <label for="vnev" class="form-label">Vezetéknév:</label>
-                <input type="text" class="form-control" id="vnev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
+                <input type="text" class="form-control" id="vnev" pattern="^[A-ZÁÉÓÖŐÚÜŰ][A-záéóöőúüű]{3,}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Nagybetűvel kezdődjön, legalább 3 betű!</div>
             </div>
             <div class="mb-3 mt-3">
                 <label for="knev" class="form-label">Keresztnév:</label>
-                <input type="text" class="form-control" id="knev" pattern="^[A-Z][A-z]{3,}$" required placeholder="Írja be a nevét" name="nev">
+                <input type="text" class="form-control" id="knev" pattern="^[A-ZÁÉÓÖŐÚÜŰ][A-záéóöőúüű]{3,}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
                 <div class="invalid-feedback">Kötelező mező! Nagybetűvel kezdődjön, legalább 3 betű!</div>
             </div>
             <div class="mb-3 mt-3">
                 <label for="tszam" class="form-label">Telefonszám:</label>
-                <input type="text" class="form-control" id="tszam" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required placeholder="Írja be a nevét" name="nev">
+                <input type="text" class="form-control" id="tszam" pattern="^\+36[1-9][0-9]{8}$" required placeholder="Írja be a nevét" name="nev">
                 <div class="valid-feedback">OK!</div>
-                <div class="invalid-feedback">Kötelező mező! Érvényes telefonszámot adjon meg!</div>
+                <div class="invalid-feedback">Kötelező mező! Érvényes telefonszámot adjon meg (+36)!</div>
             </div>
             <div class="mb-3 mt-3">
                 <label for="szlaszam" class="form-label">Számlaszám:</label>

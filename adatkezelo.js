@@ -1,5 +1,19 @@
-export function rendez(lista, irany) {
-  eredetiLISTA = lista;
+export function rendezAr(lista, irany) {
+  lista.sort(function (j1, j2) {
+    return (j1.ar - j2.ar) * irany;
+  });
+  return lista;
+}
+
+export function rendezNev(lista, irany) {
+  lista.sort(function (j1, j2) {
+    let eredmeny = 1;
+    if (j1.cim < j2.cim) {
+      eredmeny = -1;
+    }
+    return eredmeny * irany;
+  });
+  return lista;
 }
 
 export function szures(lista, keresoSzoveg) {
@@ -14,5 +28,5 @@ export function szures(lista, keresoSzoveg) {
 
 export function torol(lista, id) {
   lista.splice(id, 1);
-  return lista
+  return lista;
 }

@@ -1,5 +1,5 @@
 import { init } from "./main.js";
-import { szures, torol } from "./adatkezelo.js";
+import { rendezAr, rendezNev, szures, torol } from "./adatkezelo.js";
 
 const kosarLISTA = [];
 const szemelyLISTA = [];
@@ -89,36 +89,54 @@ export function torolEsemeny(lista) {
   });
 }
 
-/*
+export function rendezEsemeny(lista) {
+  const selectELEM = $("select");
+  selectELEM.on("change", function (event) {
+    // console.log($(event.target).val());
+    if ($(event.target).val() === "op1") {
+      const rLista = rendezNev(lista, 1);
+      init(rLista);
+    } else if ($(event.target).val() === "op2") {
+      const rLista = rendezNev(lista, -1);
+      init(rLista);
+    } else if ($(event.target).val() === "op3") {
+      const rLista = rendezAr(lista, 1);
+      init(rLista);
+    } else if ($(event.target).val() === "op4") {
+      const rLista = rendezAr(lista, -1);
+      init(rLista);
+    }
+  });
+}
+
 export function szemelyesAdatFeltoltes() {
-  const vNevELEM = $("#vnev")
-  const kNevELEM = $("#knev")
-  const tSzamELEM = $("#tszam")
-  const szlaSzamELEM = $("#szlaszam")
+  const vNevELEM = $("#vnev");
+  const kNevELEM = $("#knev");
+  const tSzamELEM = $("#tszam");
+  const szlaSzamELEM = $("#szlaszam");
   const adatOBJ = {
     vnev: "",
     knev: "",
-    tszam: 0,
-    szlaszam: 0
-  }
+    tszam: "",
+    szlaszam: 0,
+  };
 
-  const kuldELEM = $("#kuld")
-  kuldELEM.on("click", function(event) {
-    event.preventDefault()
+  const kuldELEM = $("#kuld");
+  kuldELEM.on("click", function (event) {
+    event.preventDefault();
 
-    adatOBJ.vnev = vNevELEM.val()
-    adatOBJ.knev = kNevELEM.val()
-    adatOBJ.tszam = Number(tSzamELEM.val())
-    adatOBJ.szlaszam = Number(szlaSzamELEM.val())
-    console.log(adatOBJ)
-    const validELEM = $(".valid-feedback")
-        
+    adatOBJ.vnev = vNevELEM.val();
+    adatOBJ.knev = kNevELEM.val();
+    adatOBJ.tszam = tSzamELEM.val();
+    adatOBJ.szlaszam = Number(szlaSzamELEM.val());
+    console.log(adatOBJ);
+    const validELEM = $(".valid-feedback");
+
     if (validELEM) {
-      szemelyLISTA.push(adatOBJ)
-      console.log(szemelyLISTA)
+      szemelyLISTA.push(adatOBJ);
+      console.log(szemelyLISTA);
     } else {
-      console.log("Hibás adatok!")
+      console.log("Hibás adatok!");
     }
-  })
+  });
 }
-*/
