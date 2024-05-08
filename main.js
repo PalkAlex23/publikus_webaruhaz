@@ -4,12 +4,14 @@ import {
   kosarEsemeny,
   megjelenit,
   rendezEsemeny,
+  szemelyesAdatFeltoltes,
   szuresEsemeny,
 } from "./fuggvenyek.js";
 
 init(termekLISTA);
 szuresEsemeny(termekLISTA);
 rendezEsemeny(termekLISTA);
+szemelyesAdatFeltoltes();
 
 export function init(lista) {
   megjelenit(kartyaOsszeallit(lista));

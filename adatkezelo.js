@@ -20,7 +20,7 @@ export function szures(lista, keresoSzoveg) {
   /* A keresőmezőben beírt szöveget keresi a lista objektumainak név mezőjében. */
 
   const szurtLISTA = lista.filter(function (jatek) {
-    return jatek.cim.toUpperCase().includes(keresoSzoveg.toUpperCase());
+    return jatek.cim.toUpperCase().includes(keresoSzoveg.toUpperCase()) || jatek.leiras.toUpperCase().includes(keresoSzoveg.toUpperCase());
   });
 
   return szurtLISTA;
